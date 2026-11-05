@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="UNFILTER Urban Apparel: actitud urbana, estilo propio y streetwear.">
+<title>UNFILTER | Urban Apparel</title>
+<style>
+:root{--cyan:#00B4D8;--orange:#FF6B35;--ink:#111111;--white:#FFFFFF;--muted:#b8c0c5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--white);font-family:Montserrat,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(17,17,17,.94);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff1c}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:1000;letter-spacing:.12em;font-size:1.25rem}.brand span{color:var(--cyan)}
+.links{display:flex;gap:26px;font-size:.9rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.links a:hover{color:var(--cyan)}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:70px 0 80px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 18% 80%,#00b4d82b,transparent 38%),radial-gradient(ellipse at 85% 18%,#ff6b3526,transparent 34%)}
+.hero:after{content:"";position:absolute;width:460px;height:460px;border:1px solid #00b4d833;transform:rotate(28deg);right:-220px;bottom:-240px}
+.logo-frame{width:min(760px,100%);margin:0 auto 30px;padding:12px;background:#fff;border:3px solid var(--orange);box-shadow:10px 10px 0 var(--cyan)}
+.logo-frame img{display:block;width:100%;height:auto}
+.logo-missing{color:#111;padding:32px 12px;font-weight:800}
+.kicker{color:var(--cyan);font-weight:900;letter-spacing:.25em;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.3rem,7vw,5.5rem);line-height:.98;letter-spacing:-.06em;text-transform:uppercase;margin:15px 0}
+h1 span{color:var(--orange)}.lead{max-width:650px;margin:20px auto 28px;color:#d6dadd;font-size:1.08rem}
+.btn{display:inline-block;padding:14px 24px;background:var(--orange);color:var(--ink);font-weight:1000;text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--orange);transition:.2s}
+.btn:hover{background:var(--cyan);border-color:var(--cyan);transform:translateY(-3px)}
+section{padding:88px 0;scroll-margin-top:76px}.section-head{max-width:650px;margin-bottom:36px}
+h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;text-transform:uppercase;margin:8px 0 14px;letter-spacing:-.04em}
+.section-head p{color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.statement{border-left:5px solid var(--cyan);padding:12px 0 12px 24px;font-size:1.18rem;color:#e6e9eb}
+.stamp{border:2px solid var(--orange);padding:32px;text-align:center;transform:rotate(2deg);font-size:clamp(1.5rem,4vw,2.8rem);font-weight:1000;line-height:1.1;text-transform:uppercase}
+.stamp span{color:var(--cyan)}
+.products{background:#f4f4f1;color:var(--ink)}
+.products .kicker{color:#007f98}.products .section-head p{color:#555}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product{background:white;border:1px solid #ddd;padding:26px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:6px 6px 0 var(--cyan)}
+.product:nth-child(2){box-shadow:6px 6px 0 var(--orange)}
+.product .num{font-size:.78rem;letter-spacing:.18em;font-weight:900;color:#777}
+.product h3{font-size:1.55rem;line-height:1.1;text-transform:uppercase;margin:20px 0 8px}
+.product p{color:#555;margin:0}
+.contact{background:linear-gradient(120deg,#111 55%,#102b30)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.contact-card{padding:28px;border:1px solid #ffffff30;background:#ffffff08}
+.contact-card p{color:#cbd2d5}.contact-link{display:inline-block;color:var(--cyan);font-weight:900;border-bottom:1px solid var(--cyan);margin-top:8px}
+footer{padding:24px 0;border-top:1px solid #ffffff20;color:#aeb6ba;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:700px){.links{gap:12px;font-size:.72rem}.brand{font-size:1rem}.about-grid,.contact-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr}.hero{min-height:70vh;padding:50px 0}.logo-frame{padding:6px}}
+</style>
+</head>
+<body>
+<header><nav class="wrap"><a class="brand" href="#inicio">UNFILTER<span>.</span></a><div class="links"><a href="#inicio">Inicio</a><a href="#producto">Producto</a><a href="#contacto">Contacto</a></div></nav></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap">
+<div class="logo-frame"><img src="logo.png" alt="Logotipo original de UNFILTER Urban Apparel" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="logo-missing" hidden>Coloca aquí la imagen original del logotipo con el nombre <b>logo.png</b></div></div>
+<div class="kicker">Urban Apparel · Streetwear</div><h1>Viste tu actitud.<br><span>No sigas el filtro.</span></h1>
+<p class="lead">UNFILTER es una propuesta de moda urbana para expresar tu identidad, romper la rutina y llevar tu propio estilo.</p><a class="btn" href="#producto">Explorar colección</a>
+</div></section>
+<section id="marca"><div class="wrap about-grid"><div><div class="kicker">Nuestra esencia</div><h2>Tu estilo.<br>Sin filtros.</h2><p class="statement">Creemos que la ropa es una forma de expresión. UNFILTER representa autenticidad, energía y libertad para crear tu propio camino.</p></div><div class="stamp">Be bold.<br><span>Be real.</span><br>Be unfiltered.</div></div></section>
+<section class="products" id="producto"><div class="wrap"><div class="section-head"><div class="kicker">Producto / Servicio</div><h2>Streetwear para<br>destacar.</h2><p>Una propuesta urbana pensada para combinar comodidad, personalidad y diseño. Explora nuestras líneas principales.</p></div>
+<div class="product-grid"><article class="product"><div class="num">01 / DAILY STREET</div><div><h3>Camisetas</h3><p>Prendas versátiles para expresar tu estilo todos los días.</p></div></article><article class="product"><div class="num">02 / URBAN LAYERS</div><div><h3>Hoodies</h3><p>Comodidad y actitud para completar tu outfit urbano.</p></div></article><article class="product"><div class="num">03 / ACCESSORIES</div><div><h3>Accesorios</h3><p>Detalles que hacen que cada combinación sea única.</p></div></article></div>
+</div></section>
+<section class="contact" id="contacto"><div class="wrap contact-grid"><div><div class="kicker">Hablemos</div><h2>Conecta con<br>UNFILTER.</h2><p class="lead" style="margin:0">¿Quieres conocer más sobre la marca o consultar por nuestros productos? Escríbenos.</p></div><div class="contact-card"><h3>Contacto</h3><p>Próximamente encontrarás aquí nuestros canales oficiales de atención y redes sociales.</p><a class="contact-link" href="#inicio">Volver al inicio ↑</a></div></div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 UNFILTER · URBAN APPAREL</span><span>Own your style. No filters.</span></div></footer>
+</body></html>
