@@ -14,15 +14,22 @@ header{position:sticky;top:0;z-index:10;background:rgba(17,17,17,.94);backdrop-f
 nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{font-weight:1000;letter-spacing:.12em;font-size:1.25rem}.brand span{color:var(--cyan)}
 .links{display:flex;gap:26px;font-size:.9rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.links a:hover{color:var(--cyan)}
-.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:70px 0 80px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 18% 80%,#00b4d82b,transparent 38%),radial-gradient(ellipse at 85% 18%,#ff6b3526,transparent 34%)}
-.hero:after{content:"";position:absolute;width:460px;height:460px;border:1px solid #00b4d833;transform:rotate(28deg);right:-220px;bottom:-240px}
-.logo-frame{width:min(760px,100%);margin:0 auto 30px;padding:12px;background:#fff;border:3px solid var(--orange);box-shadow:10px 10px 0 var(--cyan)}
+.hero{min-height:min(820px,calc(100vh - 76px));display:flex;align-items:center;padding:76px 0 92px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 12% 78%,#00b4d82b,transparent 38%),radial-gradient(ellipse at 88% 16%,#ff6b3526,transparent 34%),linear-gradient(135deg,#111 0%,#15191b 58%,#111 100%)}
+.hero:before{content:"";position:absolute;z-index:-1;width:520px;height:520px;border:1px solid #00b4d833;border-radius:50%;left:-300px;top:8%;box-shadow:0 0 0 34px #00b4d809,0 0 0 70px #00b4d806}
+.hero:after{content:"";position:absolute;z-index:-1;width:430px;height:430px;border:1px solid #ff6b3533;transform:rotate(28deg);right:-250px;bottom:-260px}
+.hero-inner{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center;gap:clamp(38px,6vw,86px)}
+.hero-visual{position:relative;padding:0 12px 12px 0}
+.hero-visual:after{content:"";position:absolute;z-index:-1;inset:22px -2px -2px 22px;border:1px solid var(--cyan);opacity:.55}
+.logo-frame{width:100%;max-width:560px;margin:0;padding:10px;background:#fff;border:3px solid var(--orange);box-shadow:12px 12px 0 var(--cyan)}
 .logo-frame img{display:block;width:100%;height:auto}
 .logo-missing{color:#111;padding:32px 12px;font-weight:800}
 .kicker{color:var(--cyan);font-weight:900;letter-spacing:.25em;text-transform:uppercase;font-size:.78rem}
-h1{font-size:clamp(2.3rem,7vw,5.5rem);line-height:.98;letter-spacing:-.06em;text-transform:uppercase;margin:15px 0}
-h1 span{color:var(--orange)}.lead{max-width:650px;margin:20px auto 28px;color:#d6dadd;font-size:1.08rem}
-.btn{display:inline-block;padding:14px 24px;background:var(--orange);color:var(--ink);font-weight:1000;text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--orange);transition:.2s}
+.hero-copy{max-width:560px}
+.hero h1{font-size:clamp(2.8rem,5.6vw,5.4rem);line-height:.94;letter-spacing:-.065em;text-transform:uppercase;margin:20px 0 22px}
+h1 span{color:var(--orange)}.hero .lead{max-width:490px;margin:0 0 30px;color:#d6dadd;font-size:clamp(1rem,1.4vw,1.12rem)}
+.hero .btn{display:inline-flex;align-items:center;gap:18px;padding:15px 22px;background:var(--orange);color:var(--ink);font-weight:1000;text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--orange);transition:transform .2s,background .2s,border-color .2s}
+.hero .btn:after{content:"↗";font-size:1.2rem}.hero .btn:hover{background:var(--cyan);border-color:var(--cyan);transform:translateY(-3px)}
+.hero-note{display:flex;align-items:center;gap:10px;margin-top:30px;color:#aeb6ba;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero-note:before{content:"";width:28px;height:2px;background:var(--orange)}
 .btn:hover{background:var(--cyan);border-color:var(--cyan);transform:translateY(-3px)}
 section{padding:88px 0;scroll-margin-top:76px}.section-head{max-width:650px;margin-bottom:36px}
 h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;text-transform:uppercase;margin:8px 0 14px;letter-spacing:-.04em}
@@ -45,16 +52,17 @@ h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;text-transform:uppercase;ma
 .contact-card p{color:#cbd2d5}.contact-link{display:inline-block;color:var(--cyan);font-weight:900;border-bottom:1px solid var(--cyan);margin-top:8px}
 footer{padding:24px 0;border-top:1px solid #ffffff20;color:#aeb6ba;font-size:.85rem}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media(max-width:700px){.links{gap:12px;font-size:.72rem}.brand{font-size:1rem}.about-grid,.contact-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr}.shirt{flex-basis:85vw}.shirt img{height:320px}.hero{min-height:70vh;padding:50px 0}.logo-frame{padding:6px}}
+@media(max-width:800px){.hero{min-height:auto;padding:62px 0 76px}.hero-inner{grid-template-columns:1fr;gap:42px;max-width:650px}.hero-visual{width:min(100%,520px);margin:auto}.hero-copy{text-align:center;margin:auto}.hero .lead{margin:0 auto 28px}.hero-note{justify-content:center}.hero h1{font-size:clamp(2.8rem,9vw,4.8rem)}}
+@media(max-width:700px){.links{gap:12px;font-size:.72rem}.brand{font-size:1rem}.about-grid,.contact-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr}.shirt{flex-basis:85vw}.shirt img{height:320px}.hero{padding:48px 0 62px}.hero-inner{gap:34px}.hero-visual{padding:0 8px 8px 0}.logo-frame{padding:6px}.hero h1{font-size:clamp(2.5rem,11vw,3.7rem)}.hero-note{margin-top:24px}}
 </style>
 </head>
 <body>
 <header><nav class="wrap"><a class="brand" href="#inicio">UNFILTER<span>.</span></a><div class="links"><a href="#inicio">Inicio</a><a href="#producto">Producto</a><a href="#contacto">Contacto</a></div></nav></header>
 <main>
-<section class="hero" id="inicio"><div class="wrap">
-<div class="logo-frame"><img src="logo.png" alt="Logotipo original de UNFILTER Urban Apparel" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="logo-missing" hidden>Coloca aquí la imagen original del logotipo con el nombre <b>logo.png</b></div></div>
-<div class="kicker">Urban Apparel · Streetwear</div><h1>Viste tu actitud.<br><span>No sigas el filtro.</span></h1>
-<p class="lead">UNFILTER es una propuesta de moda urbana para expresar tu identidad, romper la rutina y llevar tu propio estilo.</p><a class="btn" href="#producto">Explorar colección</a>
+<section class="hero" id="inicio"><div class="wrap hero-inner">
+<div class="hero-visual"><div class="logo-frame"><img src="logo.png" alt="Logotipo original de UNFILTER Urban Apparel" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="logo-missing" hidden>Coloca aquí la imagen original del logotipo con el nombre <b>logo.png</b></div></div></div>
+<div class="hero-copy"><div class="kicker">Urban Apparel · Streetwear</div><h1>Viste tu actitud.<br><span>No sigas el filtro.</span></h1>
+<p class="lead">UNFILTER es una propuesta de moda urbana para expresar tu identidad, romper la rutina y llevar tu propio estilo.</p><a class="btn" href="#producto">Explorar colección</a><div class="hero-note">Own your style · No filters</div></div>
 </div></section>
 <section id="marca"><div class="wrap about-grid"><div><div class="kicker">Nuestra esencia</div><h2>Tu estilo.<br>Sin filtros.</h2><p class="statement">Creemos que la ropa es una forma de expresión. UNFILTER representa autenticidad, energía y libertad para crear tu propio camino.</p></div><div class="stamp">Be bold.<br><span>Be real.</span><br>Be unfiltered.</div></div></section>
 <section class="products" id="producto"><div class="wrap"><div class="section-head"><div class="kicker">Nuestra colección</div><h2>Streetwear para<br>destacar.</h2><p>Una propuesta urbana pensada para combinar comodidad, personalidad y diseño.</p></div>
